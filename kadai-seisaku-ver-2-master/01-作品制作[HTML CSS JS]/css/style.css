@@ -1,0 +1,183 @@
+@charset "UTF-8";
+body {
+  background-color: skyblue;
+}
+
+/*各施設*/
+.hotel_box {
+  background: linear-gradient(315deg, transparent 20px, white 20px);
+  background-position: bottom left, top left, top right, bottom right;
+  background-repeat: no-repeat;
+  margin: 2rem 2rem;
+  justify-content: space-around;
+  display: flex;
+  align-items: center;
+  height: auto;
+  /*施設画像*/
+  /*レビュー☆*/
+  /*最安料金～詳細情報URL*/
+}
+
+.hotel_box ul {
+  padding: 0;
+  width: 50vw;
+  line-height: 2.5rem;
+  /*施設名*/
+}
+
+.hotel_box ul li {
+  list-style-type: none;
+}
+
+.hotel_box ul :nth-child(1) {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.hotel_box img {
+  height: 18rem;
+  width: 18rem;
+}
+
+.hotel_box .image {
+  width: 2rem;
+  height: 2rem;
+}
+
+.hotel_box .hotel_child p {
+  margin: 0;
+  margin-bottom: 7rem;
+}
+
+.hotel_box .hotel_child a {
+  text-decoration: none;
+  color: #A59D9C;
+  padding: 0.5rem 1.5rem;
+  border: solid 1px #A59D9C;
+}
+
+.header {
+  background: white;
+  margin: 0;
+  height: 100%;
+}
+
+.header a {
+  font-size: 200%;
+  text-decoration: none;
+}
+
+.display {
+  display: block;
+}
+
+.display_none {
+  display: none;
+}
+
+#next_page, #back_page {
+  background: none;
+  font-weight: bold;
+  color: white;
+  border: none;
+}
+
+#next_page, #back_page:focus {
+  outline: 0;
+}
+
+.pageing {
+  display: flex;
+  justify-content: center;
+}
+
+.page {
+  color: white;
+  margin: 0 0.5rem;
+}
+
+.page:hover {
+  color: red;
+}
+
+
+/*/////Media Queries/////*
+
+/*for tablets,laptops*/
+@media screen  and  (max-width: 768px) (min-width: 360px) {
+  body {
+    background-color: purple;
+  }
+  #list {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    /* Safari etc. */
+    -ms-flex-wrap: wrap;
+    /* IE10        */
+    flex-wrap: wrap;
+   /* grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
+    grid-gap: 5px;*/
+  }
+  .hotel_box {
+    display: block;
+    width: 40%;
+    height: 550px;
+  }
+  .hotel_box ul {
+    position: relative;
+    font-size: small;
+    width: auto;
+  }
+  .hotel_box ul :nth-child(1) {
+    word-wrap: break-word;
+    font-size: 0.8rem;
+    line-height: normal;
+  }
+  .hotel_box ul li {
+    line-height: normal;
+    width: 100%;
+    list-style: none;
+  }
+  .hotel_box img {
+    width: 98%;
+    height: 40%;
+    margin: 1%;
+  }
+  .hotel_box .hotel_child a {
+    text-decoration: none;
+    color: #A59D9C;
+    padding: 0.5rem 1.5rem;
+    border: solid 1px #A59D9C;
+    position: relative;
+  }
+  .hotel_box .hotel_child p {
+    margin-bottom: 10%;
+  }
+}
+
+/*///for smartphones///*/
+
+@media screen and (max-width: 320px)
+ {
+  body 
+       {
+         background-color: green;
+        }
+  .hotel_box ul
+        {
+          width: 100%;
+          height: auto;
+        }
+  .hotel_box #list 
+      {
+          display: none;
+          -webkit-flex-wrap: wrap;
+         
+          -ms-flex-wrap: wrap;
+             
+          flex-wrap: wrap; 
+      }
+  }
+
+
+
